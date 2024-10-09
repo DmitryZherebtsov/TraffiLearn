@@ -1,0 +1,25 @@
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3E2069;
+    padding: 2em 10%;
+}
+
+.footer_title{
+    color: #BEBEBE;
+}
+
+.social_links{
+    display: flex;
+    align-items: center;
+}
+
+.social_links>img{
+    margin: 0.3em 1em 0 0;
+}
+
+.logo{
+    width: 130px;
+    height: auto;
+}

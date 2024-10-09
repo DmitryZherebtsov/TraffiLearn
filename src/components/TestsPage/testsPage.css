@@ -1,0 +1,157 @@
+*{
+    font-weight: bold;
+}
+.test_road{
+    display: flex;
+    margin: 2em 0;
+}
+.test_page{
+    padding: 0 10%;
+}
+
+.numeration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 5%;
+}
+.num{
+    display: flex;
+    flex-direction: column;
+    width: 3em;
+    align-items: center;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+.num_checked{
+    border: 2px solid #2D2D2D;
+    background-color: #3E2069;
+    color: white;
+}
+
+.question_answer{
+    width: 40%;
+    margin: 0 3%;
+}
+.question{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.btn{
+    width: 100%;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 1.5em 1em;
+    margin: 0.5em 0;
+    transition: .2s;
+    border-radius: 30px;
+}
+.btn:hover{
+    width: 100%;
+    background-color: #CDA8F0;
+    transition: .2s;
+}
+
+.picture_and_interactions{
+    width: 50%;
+}
+
+.interactions{
+    width: 100%;
+    margin: 0.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons_interations{
+    width: 2.5em;
+    height: 2.5em;
+    cursor: pointer;
+}
+.title_interaction{
+    width: 3em;
+    height: 1.4em;
+    margin-right: 3em;
+}
+
+.answer{
+    padding: 1em 4em;
+    font-size: 1em;
+    border-radius: 20px;
+    background-color: #3E2069;
+    color: white;
+}
+.answer:hover{
+    background-color: #582d94;
+}
+
+.icons_interations {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+  
+.highlighted {
+    filter: brightness(1.2);
+    background-color: #9367cf; 
+}
+
+.hint{
+    display: flex; 
+    opacity: 0; 
+    transform: translateY(-20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.hint.show {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+  
+.hint_text{
+    width: 90%;
+    border-radius: 30px;
+    border-bottom-right-radius: 0px;
+    padding: 1em;
+    background-color: #CDA8F0;
+}
+.maskot{
+    margin: 0 1em;
+    width: 70px;
+    height: auto;
+}
+
+.close{
+    display: none;
+}
+
+.comments{
+    display: flex;
+    justify-content: space-between;
+}
+.comment_titles>h2{
+    display: flex;
+    justify-content: center;
+    padding: 0.3em 0;
+    background-color: #CDA8F0;
+    border-radius: 20px;
+}
+.comment_titles{
+    width: 48%;
+    margin: 1em 0;
+    border-radius: 20px;
+}
+.img_message{
+    width: 30px;
+    height: auto;
+}
+
+.form_control{
+    margin: 1em 0;
+    padding: 2em 0;
+    width: 100%;
+}
