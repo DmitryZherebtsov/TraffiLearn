@@ -5,15 +5,27 @@ import { main_assets } from "../../assets/assets";
 const TestsPage = () => {
   const [isIconClicked, setIsIconClicked] = useState(false);
   const [isHintOpened, setIsHintOpened] = useState(true);
+  const [selectedAnswer, setSelectedAnswer] = useState("");
 
   const handleIconClick = () => {
-    setIsIconClicked(!isIconClicked); 
+    setIsIconClicked(!isIconClicked);
   };
 
   const openHint = () => {
-    setIsHintOpened(!isHintOpened); 
+    setIsHintOpened(!isHintOpened);
   };
 
+  const handleAnswerSelected = (answer) => {
+    setSelectedAnswer(answer);
+  }
+
+  const handleSubmit = () => {
+    if (selectedAnswer) {
+        console.log(`Твоя відповідь: ${selectedAnswer}`);
+    } else {
+        console.log(`Зазнач відповідь!`);
+    }
+  };
 
   return (
     <div className="test_page">
@@ -34,19 +46,31 @@ const TestsPage = () => {
         <div className="question_answer">
           <div className="question">Недостатньою видимістю вважається: </div>
           <div>
-            <button className="btn">Обмежена оглядовість менше 300 м.</button>
-            <br />
-            <button className="btn">
-              Видимість дороги в напрямку руху менше 300 метрів, обмежена
-              поворотом дороги.
+            <button
+              className={`btn ${selectedAnswer === "Обмежена оглядовість менше 300 м." ? "btn_checked" : ""}`}
+              onClick={() => handleAnswerSelected("Обмежена оглядовість менше 300 м.")}
+            >
+              Обмежена оглядовість менше 300 м.
             </button>
             <br />
-            <button className="btn">
-              Видимість дороги в напрямку руху менше 300 м у сутінках, в умовах
-              туману, дощу, снігопаду і т. п.
+            <button
+              className={`btn ${selectedAnswer === "Видимість дороги в напрямку руху менше 300 метрів, обмежена поворотом дороги." ? "btn_checked" : ""}`}
+              onClick={() => handleAnswerSelected("Видимість дороги в напрямку руху менше 300 метрів, обмежена поворотом дороги.")}
+            >
+              Видимість дороги в напрямку руху менше 300 метрів, обмежена поворотом дороги.
             </button>
             <br />
-            <button className="btn">
+            <button
+              className={`btn ${selectedAnswer === "Видимість дороги в напрямку руху менше 300 м у сутінках, в умовах туману, дощу, снігопаду і т. п." ? "btn_checked" : ""}`}
+              onClick={() => handleAnswerSelected("Видимість дороги в напрямку руху менше 300 м у сутінках, в умовах туману, дощу, снігопаду і т. п.")}
+            >
+              Видимість дороги в напрямку руху менше 300 м у сутінках, в умовах туману, дощу, снігопаду і т. п.
+            </button>
+            <br />
+            <button
+              className={`btn ${selectedAnswer === "Небезпечний поворот, небезпечний підйом, небезпечний спуск." ? "btn_checked" : ""}`}
+              onClick={() => handleAnswerSelected("Небезпечний поворот, небезпечний підйом, небезпечний спуск.")}
+            >
               Небезпечний поворот, небезпечний підйом, небезпечний спуск.
             </button>
           </div>
@@ -60,17 +84,13 @@ const TestsPage = () => {
               <p className="title_interaction">Like</p>
             </div>
             <div>
-              <img
-                className="icons_interations"
-                src={main_assets.dislike}
-                alt=""
-              />
+              <img className="icons_interations" src={main_assets.dislike} alt="" />
               <p className="title_interaction">Dislike</p>
             </div>
 
-            <div onClick={openHint}> 
-                <img className="icons_interations" src={main_assets.bulb} alt="" />
-                <p className="title_interaction">Hint</p>
+            <div onClick={openHint}>
+              <img className="icons_interations" src={main_assets.bulb} alt="" />
+              <p className="title_interaction">Hint</p>
             </div>
 
             <div>
@@ -83,28 +103,28 @@ const TestsPage = () => {
               <p className="title_interaction">Save</p>
             </div>
 
-            <button className="answer">Відповісти</button>
+            <button className="answer" onClick={handleSubmit}>Відповісти</button>
           </div>
         </div>
       </div>
 
-      <div  className={`hint ${isHintOpened ? "show" : "close"}`}>
-        <p className="hint_text"> 
-            Правильна відповідь: Думай сам Думай самДумай самДумай сам Думай самДумай самДумай сам Думай самДумай самДумай самДумай самДумай сам Думай сам
-            Думай сам Думай самДумай самДумай сам Думай самДумай самДумай сам Думай самДумай самДумай самДумай самДумай сам Думай сам.
+      <div className={`hint ${isHintOpened ? "show" : "close"}`}>
+        <p className="hint_text">
+          Правильна відповідь: Думай сам Думай сам Думай сам Думай сам Думай сам
+          Думай сам Думай сам Думай сам Думай сам Думай сам Думай сам Думай сам.
         </p>
         <img className="maskot" src={main_assets.uncle_sam} alt="" />
       </div>
 
       <div className="comments">
         <div className="comment_titles">
-            <h2>Напиши свій коментар!</h2>
-            <textarea className="form_control" rows={3} placeholder="Напишіть тут свій коментар..."></textarea>
+          <h2>Напиши свій коментар!</h2>
+          <textarea className="form_control" rows={3} placeholder="Напишіть тут свій коментар..."></textarea>
         </div>
 
         <div className="comment_titles">
-            <h2><img className="img_message" src={main_assets.message} alt="" />Коментарі</h2>
-            <textarea className="form_control" rows={3} placeholder="Напишіть тут свій коментар..."></textarea>
+          <h2><img className="img_message" src={main_assets.message} alt="" />Коментарі</h2>
+          <textarea className="form_control" rows={3} placeholder="Напишіть тут свій коментар..."></textarea>
         </div>
       </div>
 

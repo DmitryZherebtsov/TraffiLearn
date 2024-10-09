@@ -51,6 +51,16 @@
     transition: .2s;
     border-radius: 30px;
 }
+.btn_checked{
+    width: 100%;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 1.5em 1em;
+    margin: 0.5em 0;
+    transition: .2s;
+    border-radius: 30px;
+    background-color: #723cbd;
+}
 .btn:hover{
     width: 100%;
     background-color: #CDA8F0;
