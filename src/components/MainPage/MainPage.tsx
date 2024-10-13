@@ -8,7 +8,7 @@ const MainPage = () => {
         
         <div className='first'>
             <div>
-                <h2 className='main_text'>А Ти Готовий  Пройти Тестування ПДР?</h2>
+                <h2 className='main_text'>А Ти Готовий Пройти Тестування ПДР?</h2>
             </div>
             <div className='btn_block'>
                 <Link to='/TestsPage'>
