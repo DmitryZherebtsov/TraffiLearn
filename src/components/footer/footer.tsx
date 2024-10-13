@@ -1,12 +1,15 @@
 import "./footer.css"
 import { main_assets } from "../../assets/assets"
+import { Link } from 'react-router-dom';
 
 const footer = () => {
   return (
     <div className="footer">
         
         <div>
+            <Link to='/'>
             <img className="logo" src={main_assets.logo} alt="" />
+            </Link>
         </div>
 
         <div className="social_media">
