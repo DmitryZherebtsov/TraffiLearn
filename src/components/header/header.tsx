@@ -1,17 +1,20 @@
 import './header.css'
 import { main_assets } from "../../assets/assets.tsx"
+import { Link } from 'react-router-dom';
 
 const header = () => {
   return (
     <header className='header'>
         <div className="header_left">
             <div className="logo">
-                <img src={main_assets.logo} alt="Логотип" />
+                <Link to='/' ><img src={main_assets.logo} alt="Логотип" /></Link>
             </div>
 
-            <button className="start_test_btn">
-                Розпочати Тестування
-            </button>
+            <Link to='/TestsPage' >
+                <button className="start_test_btn">
+                    Розпочати Тестування
+                </button>
+            </Link>
             
             <nav>
                 <ul className='header_nav'>

@@ -21,9 +21,9 @@ const TestsPage = () => {
 
   const handleSubmit = () => {
     if (selectedAnswer) {
-        console.log(`Твоя відповідь: ${selectedAnswer}`);
+        alert(`Твоя відповідь: ${selectedAnswer}`);
     } else {
-        console.log(`Зазнач відповідь!`);
+        alert(`Зазнач відповідь!`);
     }
   };
 

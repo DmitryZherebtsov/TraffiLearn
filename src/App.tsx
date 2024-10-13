@@ -1,17 +1,30 @@
 import './App.css'
-import Header from './components/header/header'
+import Header from './components/Header/header'
 import TestsPage from './components/TestsPage/testsPage'
 import Footer from './components/footer/footer'
+import MainPage from './components/MainPage/MainPage'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <Header />
+      <Router>
 
-      <TestsPage />
+        <Header />
 
-      <Footer />
+        <Routes>
+
+          <Route path='/' element={<MainPage />} />
+
+          <Route path='/TestsPage' element={<TestsPage/>}/>
+
+
+        </Routes>
+
+        <Footer />
+
+      </Router>
     </>
   )
 }
