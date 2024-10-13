@@ -51,6 +51,7 @@ const TestsPage = () => {
               onClick={() => handleAnswerSelected("Обмежена оглядовість менше 300 м.")}
             >
               Обмежена оглядовість менше 300 м.
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolore iusto sunt atque illo quia nobis libero ex temporibus minima, ad culpa non, nostrum nisi voluptate deleniti nesciunt ullam dolor.</p>
             </button>
             <br />
             <button

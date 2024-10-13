@@ -29,7 +29,7 @@ const footer = () => {
                 <img src={main_assets.google} alt="" />
                 <img src={main_assets.phone} alt="" />
             </div>
-        </div>
+       </div>
 
     </div>
   )
