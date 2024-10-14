@@ -33,11 +33,12 @@ const header = () => {
                 </ul>
             </nav>
         </div>
-
+        <Link to='/SignUp' >
         <div className="header-right">
             <button className='log_in_btn'><a href="#">Вхід</a> </button>
             <button className='sign_in_btn'><a href="#">Реєстрація</a></button>
         </div>
+        </Link>
     </header>
   )
 }

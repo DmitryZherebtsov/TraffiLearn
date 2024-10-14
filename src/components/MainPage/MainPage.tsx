@@ -15,7 +15,7 @@ const MainPage = () => {
                     <button className='main_page_start_test_btn'>Розпочати Тестування</button>
                 </Link>
                 <br />
-                <Link to='/TestsPage'>
+                <Link to='/SignUp'>
                     <button className='main_page_sign_in_btn'>Реєстрація</button>
                 </Link>
             </div>
