@@ -15,9 +15,10 @@ const TestsPage = () => {
     setIsHintOpened(!isHintOpened);
   };
 
-  const handleAnswerSelected = (answer) => {
+  const handleAnswerSelected = (answer: string): void => {
     setSelectedAnswer(answer);
-  }
+  };
+  
 
   const handleSubmit = () => {
     if (selectedAnswer) {
@@ -48,11 +49,9 @@ const TestsPage = () => {
           <div>
             <button
               className={`btn ${selectedAnswer === "Обмежена оглядовість менше 300 м." ? "btn_checked" : ""}`}
-              onClick={() => handleAnswerSelected("Обмежена оглядовість менше 300 м.")}
-            >
-              Обмежена оглядовість менше 300 м.
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolore iusto sunt atque illo quia nobis libero ex temporibus minima, ad culpa non, nostrum nisi voluptate deleniti nesciunt ullam dolor.</p>
-            </button>
+              onClick={() => handleAnswerSelected("Обмежена оглядовість менше 300 м.")}>
+              Обмежена оглядовість менше  300 м.
+              </button>
             <br />
             <button
               className={`btn ${selectedAnswer === "Видимість дороги в напрямку руху менше 300 метрів, обмежена поворотом дороги." ? "btn_checked" : ""}`}
